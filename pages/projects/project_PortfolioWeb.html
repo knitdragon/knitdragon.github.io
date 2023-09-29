@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dakota Ferguson" />
+
+    <!--------------------------- Favicon Links ----------------------------------->
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+    <link rel="manifest" href="/public/site.webmanifest">
+
+    <!--------------------------- Website Description ----------------------------------->
+    <title>Project: Portfolio Website</title>
+    <meta name="description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:title" content="Creation of the portfolio website" />
+    <meta name="og:site_name" content="Dakota's Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:locale" content="en_US" />
+
+    <link rel="stylesheet" href="/styles/projectPg.css" />
+    <!--<script src="/modal.js"></script>-->
+</head>
+
+<body>
+    <header id="top"><!--- Header --->
+        <div class="headerStyle">
+            <h1>D.F.</h1>
+            <nav><!--- Main navigation --->
+                <ul class="primaryNav">
+                    <li><a class="link " href="/index.html">Home</a></li>
+                    <li><a class="link" href="/pages/aboutMe.html">About Me</a></li>
+                    <li><a class="link active" href="/pages/projects.html">Projects</a></li>
+                    <li><a class="link" href="#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr /><!--- horizontal line decoration --->
+    </header>
+
+    <section id="top">
+        <h1>Portfolio Website Creation</h1>
+        <!-------------------------------- Project Summary Section --------------------------------------------->
+        <article class="featured">
+            <div class="featuredImg">
+                <img src="/assets/websiteDevHomePG.PNG" alt="Image of this website's homepage.">
+            </div>
+            <div class="projectInfoTxt">
+                <h2 class="Primary-400">Creating this portfolio website</h2>
+                <a class="sectionP Secondary1-500" href="https://GitHub"> View code on GitHub </a>
+
+                <div id="projectGoals">
+                    <h4>Summary:</h4>
+                    <p class="Primary-900 leadTxt">
+                        My personal portfolio website showcases my skills, experiences, and projects. This website
+                        serves as an interactive digital resume and a platform to highlight my expertise and
+                        accomplishments.
+                    </p>
+                </div>
+                <div class="projectSkills">
+                    <h4>Skills & Programs Used:</h4>
+                    <ul class="sectionP">
+                        <li>HTML</li>
+                        <li>CSS/SCSS</li>
+                        <li>JavaScript</li>
+                        <li>Figma</li>
+                        <li>VS Code</li>
+                        <li>UI/UX Design</li>
+                        <li>Front End Dev</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!------------------------------- Process Grid ----------------------------------------------------->
+        <article class="processGrid">
+            <div class="processBkgd">
+                <h3 class="Secondary2-100">Process</h3>
+            </div>
+            <div class="step blockA" onclick="openModal('step1')">
+                <h3>Planning and Content Selection</h3>
+                <p class="leadTxt">Plan the website's structure, content blocks, and overall aesthetic.</p>
+            </div>
+            <div class="step blockB" onclick="openModal('step2')">
+                <h3>Design and Branding</h3>
+                <p class="leadTxt">Design a visually appealing and consistent website in Figma.
+                </p>
+            </div>
+            <div class="step blockC" onclick="openModal('step3')">
+                <h3>Development</h3>
+                <p class="leadTxt">Build the website using HTML, SCSS, and JavaScript.
+                </p>
+            </div>
+            <div class="step blockD" onclick="openModal('step4')">
+                <h3>Content Creation</h3>
+                <p class="leadTxt">Create content for each section.
+                </p>
+            </div>
+            <div class="step blockA" onclick="openModal('step5')">
+                <h3>Testing and Optimization</h3>
+                <p class="leadTxt">Test for breaking points to guarantee a seamless user experience.
+                </p>
+            </div>
+            <div class="step blockB" onclick="openModal('step6')">
+                <h3>Deployment</h3>
+                <p class="leadTxt">Deploy website using the GitHub Pages.
+                </p>
+            </div>
+        </article>
+
+        <!-------------------------------- Results Section --------------------------------------------->
+        <article class="results">
+            <h3 class="Secondary2-100">Results</h3>
+            <p class="sectionP">My portfolio website is a testament to my professional journey and my commitment
+                to excellence. It not only showcases my skills but also provides a glimpse into my passion for web
+                development and design. I invite you to explore my work and connect with me.
+            </p>
+            <div class="resultsImgs">
+                <img class="multiImgs" src="/assets/websiteDevImg.PNG"
+                    alt="A few lines of HTML and CSS code for this website.">
+                <img class="multiImgs" src="/assets/websiteDevModal.PNG"
+                    alt="An image of one of the modals from this website.">
+            </div>
+            <div>
+                <h3 class="Secondary2-100">Future Posibilities</h3>
+                <ul class="sectionP">
+                    <li>Add more of my current and past projects.</li>
+                    <li>Add a section to highlight my hobbies.</li>
+                    <li>Possibly restructure the website to use React.</li>
+                </ul>
+            </div>
+
+        </article>
+
+        <!----------------------------------- Modals ------------------------------------------------->
+        <!-- Project Step 1 Modal -->
+        <div id="step1" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockA">
+                <div> <!--Modal close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 1: Planning and Content Selection</h3>
+                    <p class="sectionP">I began by planning the website's structure, selecting the most relevant
+                        content, and defining the overall aesthetic.
+                    </p>
+                    <ol>
+                        <li>Research necessary content for a project portfolio website.</li>
+                        <li>Gather and review my most recent project files.</li>
+                        <li>Create a basic wireframe in Figma for the Home, About, and Projects pages.</li>
+                        <li>Determine the overall flow of the website. </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 2 Modal -->
+        <div id="step2" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockB">
+                <div> <!-- close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 2: Design and Branding</h3>
+                    <p class="sectionP">I ensured that my personal brand identity was reflected throughout the website
+                        by crafting a visually appealing and consistent design.
+                    </p>
+                    <ol>
+                        <li>Determine the color palette for the website.</li>
+                        <li>Choose the fonts for the website.</li>
+                        <li>Determine the appropriate font sizes and styles for the text on the website.</li>
+                        <li>Choose if objects will have rounded corners or not.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 3 Modal -->
+        <div id="step3" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockC">
+                <div> <!--Modal close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 3: Development</h3>
+                    <p> Leveraging web development skills, I built the website using HTML, SCSS, and
+                        JavaScript for added interactivity.
+                    </p>
+                    <ol>
+                        <li>Open a new VS Code Workspace and create the necessary folders and page files.</li>
+                        <li>Open the index file and create the Home page HTML. Open the other website page files and
+                            write their HTML with placeholder images and text.</li>
+                        <li>Create the styles sheets in SCSS. I started with colors, fonts, and base page styles.</li>
+                        <li>Create styles sheets for each webpage. </li>
+                        <li>Add JavaScript to open and close modals.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 4 Modal -->
+        <div id="step4" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockD">
+                <div> <!--Modal  close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 4: Content Creation</h3>
+                    <p>I curated and created content for each section, including project descriptions, a
+                        bio, and contact information.
+                    </p>
+                    <ol>
+                        <li>Determine what images I needed for each page.</li>
+                        <li>Created the text for each section on the pages, starting with the home page.</li>
+                        <li>Added the contact links.</li>
+                        <li>Review the projects and write a summary, steps taken, and results sections for each.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 5 Modal -->
+        <div id="step5" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockA">
+                <div> <!--Modal close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 5: Testing and Optimization</h3>
+                    <p class="sectionP">Rigorous testing and optimization were conducted to guarantee a seamless user
+                        experience across various devices and browsers.
+                    </p>
+                    <ol>
+                        <li>Find the screen sizes where each part of the design breaks.</li>
+                        <li>Determine the correct display, margin, padding attributes for the affected design part.</li>
+                        <li>Implement media queries for each screen size.</li>
+                        <li>Check that the pages' designs don't break at small and large screen sizes.</li>
+                        <li>Ensure each link goes to the corresponding page.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 6 Modal -->
+        <div id="step6" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockB">
+                <div> <!--Modal close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 6: Deployment</h3>
+                    <p class="sectionP">Once the website was polished and ready, it was deployed using the GitHub Pages
+                        hosting platform, making it accessible to visitors.
+                    </p>
+                    <ol>
+                        <li>Add webpages to GitHub repo.</li>
+                        <li>Create a GitHub page.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer><!--- Footer --->
+        <hr /><!--- horizontal line decoration --->
+        <div class="headerStyle">
+            <a href="#top">
+                <h1>D.F.</h1>
+            </a>
+            <nav><!--- Main navigation (footer ver) --->
+                <ul class="secondaryNav">
+                    <li><a class="link " href="/index.html">Home</a></li>
+                    <li><a class="link" href="/pages/aboutMe.html">About Me</a></li>
+                    <li><a class="link active" href="/pages/projects.html">Projects</a></li>
+                    <li><a class="link" href="/index.html#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+            <p class="legal"> Copyright 2023</p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    var modals = document.getElementsByClassName('modal');
+    var closeBtns = document.getElementsByClassName('close');
+
+    // Function to open modal by id
+    function openModal(id) {
+        for (modal of modals) {
+            if (modal.getAttribute('id') == id) {
+                modal.style.display = "block";
+                document.body.style.overflowY = "hidden";
+            }
+        }
+    };
+    // Close modal when clicking X
+    for (let closeBtn of closeBtns) {
+        closeBtn.onclick = function (event) {
+            for (let modal of modals) {
+                modal.style.display = 'none';
+                document.body.style.overflowY = "overlay";
+            }
+        }
+    }
+    // Close modal when clicking outside of modal body
+    window.onclick = function (event) {
+        if (event.target.classList.contains('modal')) {
+            for (let modal of modals) {
+                modal.style.display = 'none';
+                document.body.style.overflowY = "overlay";
+            }
+        }
+    }
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dakota Ferguson" />
+
+    <!--------------------------- Favicon Links ----------------------------------->
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+    <link rel="manifest" href="/public/site.webmanifest">
+
+    <!--------------------------- Website Description ----------------------------------->
+    <title>Project: Covid Viz</title>
+    <meta name="description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:title" content="Covid Visualization" />
+    <meta name="og:site_name" content="Dakota's Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:locale" content="en_US" />
+
+    <link rel="stylesheet" href="/styles/projectPg.css" /><!--- Page stylesheet --->
+    <!--<script src="/modal.js"></script>-->
+</head>
+
+<body>
+    <header id="top"><!--- Header --->
+        <div class="headerStyle">
+            <h1>D.F.</h1>
+            <nav><!--- Main navigation --->
+                <ul class="primaryNav">
+                    <li><a class="link " href="/index.html">Home</a></li>
+                    <li><a class="link" href="/pages/aboutMe.html">About Me</a></li>
+                    <li><a class="link active" href="/pages/projects.html">Projects</a></li>
+                    <li><a class="link" href="#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr /><!--- horizontal line decoration --->
+    </header>
+
+    <section id="top">
+        <h1>Covid19 Data Visualization</h1>
+        <!-------------------------------- Project Summary Section --------------------------------------------->
+        <article class="featured">
+            <div class="featuredImg">
+                <img src="/assets/Covid19Blue.jpg" alt="Blue image of a virus cell.">
+            </div>
+            <!-------- Text about the project --------------->
+            <div class="projectInfoTxt">
+                <h2 class="Primary-300">Infection and death information</h2>
+                <a class="sectionP Secondary1-500"
+                    href="https://public.tableau.com/app/profile/dakota.ferguson/viz/CovidDashboard1_16929344574090/Dashboard1">
+                    Tableau Public Viz
+                </a>
+                <div id="projectGoals">
+                    <h4>Summary:</h4>
+                    <p class="Primary-900 leadTxt">
+                        This is the visualization of my exploration into Covid infections and
+                        deaths data. It consists of a table, a bar graph, an interactive heat map, and a line graph with
+                        predictions. I followed the Alex the Analyst YouTube video to complete this project. In the
+                        future I plan on exploring the data further to view how different comorbidities affected a
+                        patient's outcome.
+
+                    </p>
+                </div>
+                <div class="dataSource">
+                    <p>Data Source:</p>
+                    <p class=" legal">
+                        Our World in Data website (August 22, 2023).
+                    </p>
+                </div>
+
+                <div class="projectSkills">
+                    <h4>Skills & Programs Used:</h4>
+                    <ul class="sectionP">
+                        <li>Tableau</li>
+                        <li>Data Visualization</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!------------------------------- Process Grid ----------------------------------------------->
+        <article class="processGrid">
+            <div class="processBkgd">
+                <h3 class="Secondary2-100">Process</h3>
+            </div>
+            <div class="step blockA" onclick="openModal('step1')" id="step1">
+                <h3 class="Secondary-900">Gather Data</h3>
+                <p class="leadTxt">Get data from data tables in BigQuery using SQL and export as MS Excel spreadsheets.
+                </p>
+            </div>
+            <div class="step blockB" onclick="openModal('step2')" id="step2">
+                <h3 class="Secondary-900">Create Tableau Sheets</h3>
+                <p class="leadTxt">Using the saved Excel tables, create graphs in Tableau sheets. </p>
+            </div>
+            <div class="step blockC" onclick="openModal('step3')" id="step3">
+                <h3 class="Secondary-900">Create Tableau Dashboard</h3>
+                <p class="leadTxt">Place the graphs created on each sheet onto a dashboard.</p>
+            </div>
+            <div class="step blockD" onclick="openModal('step4')" id="step4">
+                <h3 class="Secondary-900">Publish Dashboard</h3>
+                <p class="leadTxt">Publish the finished dashboard to Tableau Public.</p>
+            </div>
+        </article>
+
+        <!------------------------------- Results Section -------------------------------------------->
+        <article class="results">
+            <h3 class="Secondary2-100">Results</h3>
+            <p class="sectionP">This is the resulting dashboard created on Tableau Public that displays Covid19 death
+                and infection information. On the left side it shows the total cases, total deaths, and deathpercentage
+                as a table and a bar graph of the total death count for each continent. On the right side, an
+                interactive map showing the highest percent of a country's population infected. At the bottom a line
+                graph shows the percent of the population of four countries infected by month from November 2019 to July
+                2023. The line graph also includes predictions (shaded area) for the next year.
+            </p>
+            <p class="sectionP">As seen on the varous charts, the areas with the highest infection and death rate from
+                Covid19 were Europe, Asia, and North America. At the end of August 2023, the total number of Covid19
+                cases was 769,789,653 and the death rate was 0.90%.</p>
+
+            <div class="resultsImgs">
+                <img src="/assets/tableau-CovidDashboard1.PNG"
+                    alt="Covid19 dashboard showing the total cases, total deaths, death percentage in the top left. A bar graph of the total death count for each continent in the mid left section. An interactive map showing the highest percent of a country's population infected in the top right. A line graph of the percent of the population infected by month from November 2019 to July 2023.">
+            </div>
+            <div>
+                <h3 class="Secondary2-100">Future Posibilities</h3>
+                <ul class="sectionP">
+                    <li>Check for any updates to data.</li>
+                    <li>Visualize how much of the population on each continent was infected.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!----------------------------------- Modals ------------------------------------------------->
+        <!-- Project Step 1 Modal -->
+        <div id="step1" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockA">
+                <div> <!--Modal Image & close button -->
+                    <span class="close sectionP">&times;</span>
+
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 1: Gather Data</h3>
+                    <p class="sectionP">Get data from data tables (in BigQuery SQL) and save results as MS Excel file.
+                    </p>
+                    <ol>
+                        <li>Get total cases, deaths, and calculated death percentage from dataset.</li>
+                        <li>Remove locations not in previous query (European Union, World, High income, Upper middle
+                            income, Lower middle income,
+                            Low income)</li>
+                        <li>Get total deaths per continent from dataset.</li>
+                        <li>Calculate the percent of population infected from the highest infection count per location.
+                        </li>
+                        <li>Get the corresponding dates for the calculated percent of population infected per location.
+                        </li>
+                        <li>Change nulls in Excel columns to 0.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 2 Modal -->
+        <div id="step2" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockB">
+                <div> <!--Modal Image & close button -->
+                    <span class="close sectionP">&times;</span>
+
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 2: Create Tableau Sheets</h3>
+                    <p class="sectionP">Import each table from Step 1 into seperate Tableau sheets.
+                    </p>
+                    <ol>
+                        <li>Sheet 1: Global numbers (Table)</li>
+                        <li>Sheet 2: Current global death count (Bar Graph)</li>
+                        <li>Sheet 3: Total Infection Percentage by country (Map)</li>
+                        <li>Sheet 4: Highlight select countries (Line Graph with predictions)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 3 Modal -->
+        <div id="step3" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockC">
+                <div> <!--Modal Image & close button -->
+                    <span class="close sectionP">&times;</span>
+
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 3: Create Tableau Dashboard</h3>
+                    <p> Place Tableau sheets on dashboard.
+                    </p>
+                    <ol>
+                        <li>Add a desktop layout and change fit from "Default" to "Fit All". </li>
+                        <li>Place the Global Numbers table in the top left corner.</li>
+                        <li>Place the Current Global Death Count bar graph in the middle left side.</li>
+                        <li>Place the Total Infection Percentage Map in the top right corner.</li>
+                        <li>Place the Highlighted Countries line graph and predictions at bottom.
+                        </li>
+
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 4 Modal -->
+        <div id="step4" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockD">
+                <div> <!--Modal Image & close button -->
+                    <span class="close sectionP">&times;</span>
+
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 4: Publish the Dashboard to Tableau Public</h3>
+                    <p>Save the dashboard and make it visiable to the public.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer><!--- Footer --->
+        <hr /><!--- horizontal line decoration --->
+        <div class="headerStyle">
+            <a href="#top">
+                <h1>D.F.</h1>
+            </a>
+            <nav><!--- Main navigation (footer ver) --->
+                <ul class="secondaryNav">
+                    <li><a class="link " href="/index.html">Home</a></li>
+                    <li><a class="link" href="/pages/aboutMe.html">About Me</a></li>
+                    <li><a class="link active" href="/pages/projects.html">Projects</a></li>
+                    <li><a class="link" href="/index.html#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+            <p class="legal"> Copyright 2023</p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    var modals = document.getElementsByClassName('modal');
+    var closeBtns = document.getElementsByClassName('close');
+
+    // Function to open modal by id
+    function openModal(id) {
+        for (modal of modals) {
+            if (modal.getAttribute('id') == id) {
+                modal.style.display = "block";
+                document.body.style.overflowY = "hidden";
+            }
+        }
+    };
+    // Close modal when clicking X
+    for (let closeBtn of closeBtns) {
+        closeBtn.onclick = function (event) {
+            for (let modal of modals) {
+                modal.style.display = 'none';
+                document.body.style.overflowY = "overlay";
+            }
+        }
+    }
+    // Close modal when clicking outside of modal body
+    window.onclick = function (event) {
+        if (event.target.classList.contains('modal')) {
+            for (let modal of modals) {
+                modal.style.display = 'none';
+                document.body.style.overflowY = "overlay";
+            }
+        }
+    }
+
+
+
+</script>
+
+
+</html>

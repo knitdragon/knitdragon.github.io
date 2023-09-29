@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dakota Ferguson" />
+
+    <!--------------------------- Favicon Links ----------------------------------->
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+    <link rel="manifest" href="/public/site.webmanifest">
+
+    <!--------------------------- Website Description ----------------------------------->
+    <title>Project: Covid Data</title>
+    <meta name="description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:title" content="Exploring Covid Data" />
+    <meta name="og:site_name" content="Dakota's Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:locale" content="en_US" />
+
+
+    <link rel="stylesheet" href="/styles/projectPg.css" />
+
+</head>
+
+<body>
+    <header id="top"><!--- Header --->
+        <div class="headerStyle">
+            <h1>D.F.</h1>
+            <nav><!--- Main navigation --->
+                <ul class="primaryNav">
+                    <li><a class="link " href="/index.html">Home</a></li>
+                    <li><a class="link" href="/pages/aboutMe.html">About Me</a></li>
+                    <li><a class="link active" href="/pages/projects.html">Projects</a></li>
+                    <li><a class="link" href="#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr /><!--- horizontal line decoration --->
+    </header>
+
+    <section id="top">
+        <h1>Covid19 Data Exploration</h1>
+        <!-------------------------------- Project Summary Section --------------------------------------------->
+        <article class="featured">
+            <div class="featuredImg">
+                <img src="/assets/covid3dModel.jpg" alt="3d computer image of the SARS-COV2 virus">
+            </div>
+            <!-------- Text about the project --------------->
+            <div class="projectInfoTxt">
+                <h2 class="Primary-300">Infection and death information</h2>
+                <a class="sectionP Secondary1-500"
+                    href="https://public.tableau.com/app/profile/dakota.ferguson/viz/CovidDashboard1_16929344574090/Dashboard1">
+                    Tableau Public Viz
+                </a>
+                <div id="projectGoals">
+                    <h4>Summary:</h4>
+                    <p class="Primary-900 leadTxt">
+                        This project contains my exploration into Covid19 infections and
+                        deaths data. It consists of getting data from the Our World in Data website and processing
+                        the downloaded spreadsheet into smaller spreadsheets. I separated the deaths data from the
+                        infections data and saved it as a separate Excel file. Then I uploaded the spreadsheets into
+                        BigQuery to explore the data with SQL queries. Finally I exported the resulting tables for use
+                        in the Covid data visualization project.
+                        I followed Alex the Analyst's YouTube video to complete this project. In the
+                        future I plan on exploring the data further to determine how different comorbidities affected a
+                        patient's outcome.
+                    </p>
+                </div>
+                <div class="dataSource">
+                    <p>Data Source:</p>
+                    <p class=" legal">
+                        Our World in Data website (August 22, 2023).
+                    </p>
+                </div>
+
+                <div class="projectSkills">
+                    <h4>Skills & Programs Used:</h4>
+                    <ul class="sectionP">
+                        <li>Excel</li>
+                        <li>Data Exploration</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!------------------------------- Process Grid ----------------------------------------------------->
+        <article class="processGrid">
+            <div class="processBkgd">
+                <h3 class="Secondary2-100">Process</h3>
+            </div>
+            <div class="step blockA" onclick="openModal('step1')">
+                <h3 class="Secondary-900">Gather Data</h3>
+                <p class="leadTxt">Download the data from the Our World in Data Covid 19 webpage.</p>
+            </div>
+            <div class="step blockB" onclick="openModal('step2')">
+                <h3 class="Secondary-900">Separate The Data</h3>
+                <p class="leadTxt">Open the dataset in Excel and separate deaths and infection data. </p>
+            </div>
+            <div class="step blockC" onclick="openModal('step3')">
+                <h3 class="Secondary-900">Explore the Covid deaths dataset</h3>
+                <p class="leadTxt">Upload the Covid deaths dataset into BigQuery and use queries to explore the data.
+                </p>
+            </div>
+            <div class="step blockD" onclick="openModal('step4')">
+                <h3 class="Secondary-900">Explore Covid19's global impact</h3>
+                <p class="leadTxt">Determine the global scale of the pandamic by</p>
+            </div>
+            <div class="step blockA" onclick="openModal('step5')">
+                <h3 class="Secondary-900">Join the two tables together</h3>
+                <p class="leadTxt">Explore the total dataset by joining the vaccination table with the death table.</p>
+            </div>
+            <div class="step blockB" onclick="openModal('step6')">
+                <h3 class="Secondary-900">Calculate the max covid vaccination percentage</h3>
+                <p class="leadTxt">Craeate a temp table (CTE) to view the max vaccination percentage. </p>
+            </div>
+            <div class="step blockC" onclick="openModal('step7')">
+                <h3 class="Secondary-900">Prep data for Tableau Viz</h3>
+                <p class="leadTxt">Export the tables with calculated values as Excel spreadsheets.
+                </p>
+            </div>
+            <div class="step blockD" onclick="openModal('step8')">
+                <h3 class="Secondary-900">Upload to GitHub</h3>
+                <p class="leadTxt">Upload the project's SQL queries to the project's GitHub page.</p>
+            </div>
+        </article>
+
+        <!-------------------------------- Results Section --------------------------------------------->
+        <article class="results">
+            <h3 class="Secondary2-100">Results</h3>
+            <p class="sectionP">The data set contained data from January 3, 2020 to August 16, 2023. The dataset
+                contained 67 fields. The dataset was separated into two Excel spreadsheets, one relating to Covid19
+                deaths and the other to Covid19 vaccinations. The Covid19 deaths Excel spreadsheet contained all columns
+                from the start of the dataset to the weekly_hosp_addmissions_per_million column. The Covid19
+                vaccinations spreadsheet included the first 4 columns (iso_code, continent,location, date) and all
+                columns after the weekly_hosp_addmissions_per_million column. There was a total of 334,304 line items.
+                Most countries did not start counting Covid19 cases until March 2020 and changed from daily to weekly
+                counts in
+                April 2023.
+            </p>
+            <p class="sectionP">The columns calculated in this project were:</p>
+            <ol>
+                <li> DeathRate ( percent of infected population that died),</li>
+                <li> PopulationPercent (percent of the population that got Covid19),</li>
+                <li> HighestInfectionCount (max number of total cases per location),</li>
+                <li> PercentPopulationInfected (max PopulationPercent per location),</li>
+                <li> TotalDeathCount (max total deaths per location),</li>
+                <li> Total_Cases (sum of all cases),</li>
+                <li> Total_Deaths (sum of all deaths),</li>
+                <li> DeathPercentage (death percentage of infected population of the world),</li>
+                <li> VaccinatedPopulationPercent (percentage of vaccinated population by location).</li>
+            </ol>
+
+            <div>
+                <h3 class="Secondary2-100">Future Posibilities</h3>
+                <ul class="sectionP">
+                    <li>Determine how different comorbidities affected a patient's outcome.</li>
+                    <li>Check for updates to the dataset.</li>
+                    <li>Redo the project in MS SQL Server.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!----------------------------------- Modals ------------------------------------------------->
+        <!-- Project Step 1 Modal -->
+        <div id="step1" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockA">
+                <!--Modal Image & close button -->
+                <span class="close sectionP">&times;</span>
+                <div class="modalTxt">
+                    <h3>Step 1: Gather Data</h3>
+                    <p class="sectionP">Download the data from the Our World in Data Covid 19 webpage.
+                    </p>
+                    <ol>
+                        <li>Go to the source website:ourworldindata.org/covid-deaths. </li>
+                        <li>Scroll to the Covid graph and push the slider all the way to the earliest date. </li>
+                        <li>Download the dataset as a CSV file.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 2 Modal -->
+        <div id="step2" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockB">
+                <!--Modal Image & close button -->
+                <span class="close sectionP">&times;</span>
+                <div class="modalTxt">
+                    <h3>Step 2: Separate the data</h3>
+                    <p class="sectionP">Open the dataset in Excel and separate deaths and infection data.
+                    </p>
+                    <ol>
+                        <li>Open the downloaded dataset in MS Excel.</li>
+                        <li>Place the Date column to the left of the Population column.</li>
+                        <li>Remove every column after the weekly_hosp_addmissions_per_million column and save
+                            spreadsheet as CovidDeaths.</li>
+                        <li>Remove every column from the weekly_hosp_addmissions_per_million column to population and
+                            save spreadsheet as CovidVaccinations.</li>
+                        <li>Create a new dataset in BigQuery</li>
+                        <li>Create the CovidDeaths table and CovidVaccinations table by uploading the spreadsheets with
+                            the auto detect schema option selected.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 3 Modal -->
+        <div id="step3" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockC">
+                <!--Modal Image & close button -->
+                <span class="close sectionP">&times;</span>
+
+                <div class="modalTxt">
+                    <h3>Step 3: Explore the COVID deaths dataset</h3>
+                    <p> Upload the Covid deaths dataset into BigQuery and use queries to explore the data. </p>
+                    <ol>
+                        <li>Select the location, date, total_cases, total_deaths, population and calculate the
+                            DeathRate.</li>
+                        <li>View only the PopulationPercent infected of a single country (USA).</li>
+                        <li>View countries with the highest infection rate.</li>
+                        <li>View the countries with the highest death count per population.</li>
+                        <li>Group the TotalDeathCount by continent. </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 4 Modal -->
+        <div id="step4" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockD">
+                <!--Modal Image & close button -->
+                <span class="close sectionP">&times;</span>
+                <div class="modalTxt">
+                    <h3>Step 4: Explore Covid19's global impact</h3>
+                    <p>Explore Covid19's global impact</p>
+                    <ol>
+                        <li>Find the Total_Cases using the sum of new_cases.</li>
+                        <li>Find the Total_Deaths using the sum of new_deaths.</li>
+                        <li>Find the DeathPercentage by dividing the sum of new_deaths by the sum of new_cases times
+                            100.</li>
+                        <li>Ensure the queries are not dividing by 0.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 5 Modal -->
+        <div id="step5" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockA">
+                <!--Modal Image & close button -->
+                <span class="close sectionP">&times;</span>
+                <div class="modalTxt">
+                    <h3>Step 5: Join the two tables together</h3>
+                    <p class="sectionP">Explore the total dataset by joining the vaccination table with the death table.
+                    </p>
+                    <ol>
+                        <li>Join the Covid19 vaccinations table with the Covid deaths table via an inner join.</li>
+                        <li>Using the joined table compare the total population vs the number of people vaccinated in
+                            the world.</li>
+
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 6 Modal -->
+        <div id="step6" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockB">
+                <!--Modal Image & close button -->
+                <span class="close sectionP">&times;</span>
+                <div class="modalTxt">
+                    <h3>Step 6: Calculate the max covid vaccination percentage</h3>
+                    <p class="sectionP">Craeate a temp table (CTE) to view the max vaccination percentage.
+                    </p>
+                    <ol>
+                        <li>Use a CTE to create a temp table to find teh max value of the calculated vaccination
+                            percentage.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 7 Modal -->
+        <div id="step7" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockC">
+                <!--Modal Image & close button -->
+                <span class="close sectionP">&times;</span>
+
+                <div class="modalTxt">
+                    <h3>Step 7: Prep data for Tableau Viz</h3>
+                    <p> Export the tables with calculated values as Excel spreadsheets.
+                    </p>
+                    <ol>
+                        <li> Export the resulting data tables from BigQuery as MS Excel spreadsheets.</li>
+                        <li> Export and save the temp table with the max Covid19 vaccination percentage.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 8 Modal -->
+        <div id="step8" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockD">
+                <div> <!--Modal Image & close button -->
+                    <span class="close sectionP">&times;</span>
+
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 8: Upload to GitHub</h3>
+                    <p>Upload the project's SQL queries to the project's GitHub page. </p>
+                    <ol>
+                        <li>Upload text file contianing SQL queries.</li>
+                        <li>Format queries.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer><!--- Footer --->
+        <hr /><!--- horizontal line decoration --->
+        <div class="headerStyle">
+            <a href="#top">
+                <h1>D.F.</h1>
+            </a>
+            <nav><!--- Main navigation (footer ver) --->
+                <ul class="secondaryNav">
+                    <li><a class="link " href="/index.html">Home</a></li>
+                    <li><a class="link" href="/pages/aboutMe.html">About Me</a></li>
+                    <li><a class="link active" href="/pages/projects.html">Projects</a></li>
+                    <li><a class="link" href="/index.html#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+            <p class="legal"> Copyright 2023</p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    var modals = document.getElementsByClassName('modal');
+    var closeBtns = document.getElementsByClassName('close');
+
+    // Function to open modal by id
+    function openModal(id) {
+        for (modal of modals) {
+            if (modal.getAttribute('id') == id) {
+                modal.style.display = "block";
+                document.body.style.overflowY = "hidden";
+            }
+        }
+    };
+    // Close modal when clicking X
+    for (let closeBtn of closeBtns) {
+        closeBtn.onclick = function (event) {
+            for (let modal of modals) {
+                modal.style.display = 'none';
+                document.body.style.overflowY = "overlay";
+            }
+        }
+    }
+    // Close modal when clicking outside of modal body
+    window.onclick = function (event) {
+        if (event.target.classList.contains('modal')) {
+            for (let modal of modals) {
+                modal.style.display = 'none';
+                document.body.style.overflowY = "overlay";
+            }
+        }
+    }
+
+
+
+</script>
+
+
+</html>

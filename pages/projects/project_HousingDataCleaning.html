@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dakota Ferguson" />
+
+    <!--------------------------- Favicon Links ----------------------------------->
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+    <link rel="manifest" href="/public/site.webmanifest">
+
+    <!--------------------------- Website Description ----------------------------------->
+    <title>Project: Data Cleaning</title>
+    <meta name="description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:title" content="Cleaning Nashville Housing Data" />
+    <meta name="og:site_name" content="Dakota's Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:locale" content="en_US" />
+
+    <link rel="stylesheet" href="/styles/projectPg.css" />
+    <!--<script src="/modal.js"></script>-->
+</head>
+
+<body>
+    <header id="top"><!--- Header --->
+        <div class="headerStyle">
+            <h1>D.F.</h1>
+            <nav><!--- Main navigation --->
+                <ul class="primaryNav">
+                    <li><a class="link " href="/index.html">Home</a></li>
+                    <li><a class="link" href="/pages/aboutMe.html">About Me</a></li>
+                    <li><a class="link active" href="/pages/projects.html">Projects</a></li>
+                    <li><a class="link" href="#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr /><!--- horizontal line decoration --->
+    </header>
+
+    <section id="top">
+        <h1>Cleaning Nashville Housing Data</h1>
+        <!-------------------------------- Project Summary Section --------------------------------------------->
+        <article class="featured">
+            <div class="featuredImg">
+                <img src="/assets/housingImg.png" alt="Generic image of houses lining a street">
+            </div>
+            <!-------- Text about the project --------------->
+            <div class="projectInfoTxt">
+                <h2 class="Primary-400">Practicing Data Cleaning</h2>
+                <a class="sectionP Secondary1-500" href="https://GitHub"> View code on GitHub </a>
+
+                <div id="projectGoals">
+                    <h4>Summary:</h4>
+                    <p class="Primary-900 leadTxt">
+                        This project focuses on cleaning a dataset for future use. The goals of the project were to
+                        change date format, populate any missing data values,
+                        separate addresses, convert any inconsistant values like shorthand vs longhand naming
+                        convension, remove duplicates, and to delete excess columns from a database copy.
+                        I followed Alex the Analyst's YouTube video to complete this project.
+                    </p>
+                </div>
+                <div class="dataSource">
+                    <p>Data Source:</p>
+                    <p class=" legal">
+                        Alex The Analyst's GitHub page (September 2023).
+                    </p>
+                </div>
+
+                <div class="projectSkills">
+                    <h4>Skills & Programs Used:</h4>
+                    <ul class="sectionP">
+                        <li>SQL</li>
+                        <li>BigQuery</li>
+                        <li>Data Cleaning</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!------------------------------- Process Grid ----------------------------------------------------->
+        <article class="processGrid">
+            <div class="processBkgd">
+                <h3 class="Secondary2-100">Process</h3>
+            </div>
+            <div class="step blockA" onclick="openModal('step1')" id="step1">
+                <h3 class="Secondary-900">Gather Data</h3>
+                <p class="leadTxt">Download the Nashville Housing dataset from GitHub and import into BigQuery.</p>
+            </div>
+            <div class="step blockB" onclick="openModal('step2')" id="step2">
+                <h3 class="Secondary-900">Standardize the date format</h3>
+                <p class="leadTxt">Change the saltes dat field from the datetime format to date.</p>
+            </div>
+            <div class="step blockC" onclick="openModal('step3')" id="step3">
+                <h3 class="Secondary-900">Fix missing data</h3>
+                <p class="leadTxt">Populate null property addresses where there is a related ParcelID.</p>
+            </div>
+            <div class="step blockD" onclick="openModal('step4')" id="step4">
+                <h3 class="Secondary-900">Split address</h3>
+                <p class="leadTxt">Split the property address and owner address into the street address, city, and
+                    state.
+                </p>
+            </div>
+            <div class="step blockA" onclick="openModal('step5')" id="step5">
+                <h3 class="Secondary-900">Fix inconsitant values</h3>
+                <p class="leadTxt">Change inconsitant Y/N values to Yes/No in the SoldAsVacant field.
+                </p>
+            </div>
+            <div class="step blockB" onclick="openModal('step6')" id="step6">
+                <h3 class="Secondary-900">Remove Duplicates and Unused Columns</h3>
+                <p class="leadTxt">Delete duplicates and unused columns in the copied database.
+                </p>
+            </div>
+        </article>
+
+        <!-------------------------------- Results Section --------------------------------------------->
+        <article class="results">
+            <h3 class="Secondary2-100">Results</h3>
+            <p class="sectionP">The data was cleaned by:</p>
+            <ol>
+                <li>changing the date format with CAST,</li>
+                <li>populating missing data values in PropertyAddress field,</li>
+                <li>separating the PropertyAddress and OwnerAddress fields using SPLIT()[OFFSET()],</li>
+                <li>converting shorthand Y/N to longhand Yes/No using CASE-WHEN,</li>
+                <li>removing duplicates using a CTE.</li>
+            </ol>
+
+            <!--<div class="resultsImgs">
+                <img src="/assets"
+                    alt=" ">
+            </div>-->
+            <div>
+                <h3 class="Secondary2-100">Future Posibilities</h3>
+                <ul class="sectionP">
+                    <li>Find housing data in another city or region.</li>
+                    <li>Compare the Nashville housing data to another region's housing data.</li>
+                    <li>Redo the project in MS SQL Server.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!----------------------------------- Modals ------------------------------------------------->
+        <!-- Project Step 1 Modal -->
+        <div id="step1" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockA">
+                <div> <!--Modal Image & close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 1: Gather Data</h3>
+                    <p class="sectionP">Download the Nashville Housing dataset from GitHub and import into BigQuery.
+                    </p>
+                    <ol>
+                        <li>Download the "Nashville Housing Data" dataset from GitHub
+                            (https://github.com/AlexTheAnalyst/PortfolioProjects/tree/main).</li>
+                        <li>Launch a new Python 3 notebook in Jupiter Notebooks.</li>
+                        <li>Import the Google Sheets files into BigQuery.</li>
+                        <li>Read the data table header to identify field titles.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 2 Modal -->
+        <div id="step2" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockB">
+                <div> <!--Modal Image & close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 2: Standardize the date format</h3>
+                    <p class="sectionP">Change the sales date field from the datetime format to date.
+                    </p>
+                    <ol>
+                        <li>Change the SaleDate field data type from "datetime" to "date" with CAST().</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 3 Modal -->
+        <div id="step3" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockC">
+                <div> <!--Modal Image & close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 3: Fix missing data</h3>
+                    <p> Populate null property addresses where there is a related ParcelID.
+                    </p>
+                    <ol>
+                        <li>Check property address values for nulls.</li>
+                        <li>The ParcelID is associated with the PropertyAddress. </li>
+                        <li>Populate PropertyAddress by using ParcelID. </li>
+                        <li>Use a JOIN on ParcelID to find and replace PropertyAddress if null.</li>
+                        <li>Update Nashville table with new values. </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 4 Modal -->
+        <div id="step4" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockD">
+                <div> <!--Modal Image & close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 4: Split address</h3>
+                    <p>Split the property address and owner address into the street address, city, and
+                        state.
+                    </p>
+                    <ol>
+                        <li>Split the PropertyAddress values into Address and City using SPLIT() at the "," delimiter.
+                        </li>
+                        <li>Split the OwnerAddress values into Address, City, and State using SPLIT() and offset at the
+                            "," delimiter.</li>
+                        <li>Update the Nashville table with the new columns.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 5 Modal -->
+        <div id="step5" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockA">
+                <div> <!--Modal Image & close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 5: Fix inconsitant values</h3>
+                    <p>Change inconsitant Y/N values to Yes/No in the SoldAsVacant field.
+                    </p>
+                    <ol>
+                        <li>Check SoldAsVacant column value range to identify inconsistancies: Y, N, Yes, No values.
+                        </li>
+                        <li> Change the Y/N values to Yes/No using WHEN THEN ELSE statements. </li>
+                        <li>Update the Nashville table with the new values in the Result column.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 6 Modal -->
+        <div id="step6" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockB">
+                <div> <!--Modal Image & close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 6: Remove Duplicates and Unused Columns</h3>
+                    <p>Delete duplicates and unused columns in the copied database.
+                    </p>
+                    <ol>
+                        <li>Find duplicate values by partitiong data using a CTE.</li>
+                        <li>Check that the duplicates are gone with the CTE.</li>
+                        <li>Save the table containing no duplicates. </li>
+                        <li>Drop unused columns for data visualization and save as a new table. </li>
+                        <li>Save queries to GitHub.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer><!--- Footer --->
+        <hr /><!--- horizontal line decoration --->
+        <div class="headerStyle">
+            <a href="#top">
+                <h1>D.F.</h1>
+            </a>
+            <nav><!--- Main navigation (footer ver) --->
+                <ul class="secondaryNav">
+                    <li><a class="link " href="/index.html">Home</a></li>
+                    <li><a class="link" href="/pages/aboutMe.html">About Me</a></li>
+                    <li><a class="link active" href="/pages/projects.html">Projects</a></li>
+                    <li><a class="link" href="/index.html#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+            <p class="legal"> Copyright 2023</p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    var modals = document.getElementsByClassName('modal');
+    var closeBtns = document.getElementsByClassName('close');
+
+    // Function to open modal by id
+    function openModal(id) {
+        for (modal of modals) {
+            if (modal.getAttribute('id') == id) {
+                modal.style.display = "block";
+                document.body.style.overflowY = "hidden";
+            }
+        }
+    };
+    // Close modal when clicking X
+    for (let closeBtn of closeBtns) {
+        closeBtn.onclick = function (event) {
+            for (let modal of modals) {
+                modal.style.display = 'none';
+                document.body.style.overflowY = "overlay";
+            }
+        }
+    }
+    // Close modal when clicking outside of modal body
+    window.onclick = function (event) {
+        if (event.target.classList.contains('modal')) {
+            for (let modal of modals) {
+                modal.style.display = 'none';
+                document.body.style.overflowY = "overlay";
+            }
+        }
+    }
+
+
+
+</script>
+
+</html>

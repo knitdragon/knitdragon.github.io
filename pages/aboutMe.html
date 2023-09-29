@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dakota Ferguson" />
+
+    <!--------------------------- Favicon Links ----------------------------------->
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+    <link rel="manifest" href="/public/site.webmanifest">
+
+    <!--------------------------- Website Description ----------------------------------->
+    <title>About Me</title>
+    <meta name="description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:title" content="About Me" />
+    <meta name="og:site_name" content="Dakota's Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:locale" content="en_US" />
+
+
+    <link rel="stylesheet" href="/styles/aboutStyle.css" />
+
+</head>
+
+<body>
+    <header id="top"><!--- Header --->
+        <div class="headerStyle">
+            <h1 id="headName">D.F.</h1>
+            <nav><!--- Main navigation --->
+                <ul class="primaryNav">
+                    <li><a class="link " href="/index.html">Home</a></li>
+                    <li><a class="link active" href="#">About Me</a></li>
+                    <li><a class="link " href="/pages/projects.html">Projects</a></li>
+                    <li><a class="link" href="/index.html#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr /><!--- horizontal line decoration --->
+
+    </header>
+
+    <section id="top">
+        <!------------------------------- About Me Hero Section --------------------------------------->
+        <article id="aboutSection">
+            <h1>About Me</h1>
+            <div class="hero">
+                <!-------- About Me Images --------------->
+                <div class="heroImgs">
+                    <div class="lgImgContainer">
+                        <div class="lgImg">
+                            <img src="/assets/AIgeneratedBeach.jpg" alt="waves crashing on a beach generated with AI">
+                            <p class="leadTxt">Fueled by an endless desire to explore, I navigate the sea of
+                                knowledge,
+                                seeking to weave the threads of learning into a tapestry of meaningful insights.</p>
+                        </div>
+                    </div>
+
+                    <div class="topImg1" onclick="openModal('aboutModal')" id="aboutModal">
+                        <img src="/assets/spunYarn.JPG" alt="orange and red handspun yarn skein">
+                        <p class="leadTxt">more about me</p>
+                    </div>
+
+                    <div class="topImg2">
+                        <img src="/assets/websiteDevImg.PNG" alt="screenshot of this website's code">
+                        <p class="leadTxt">self-taught</p>
+                    </div>
+                </div>
+
+                <div class="bottomGp" onclick="openModal('likesModal')" id="likesModal">
+                    <h1>Dakota Ferguson</h1>
+                    <div class="smImg">
+                        <img src="/assets/chu.jpg" alt="Legend of Zelda Breath of the Wild chu enemy">
+                        <div>
+                            <p class="cardTitle">Things I like:</p>
+                            <p class="leadTxt">fiber arts, technology, video games, dogs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-------- About Me paragraph text --------------->
+                <div class="heroTxt">
+                    <h2 class="Primary-700">I'm a curious soul with a diverse set of interests and a passion for
+                        continual learning.
+                    </h2>
+                    <div id="techJourney">
+                        <h4 class="cardTitle">My Learning Journey</h4>
+                        <p class=" Neutral-900"> My journey has been a long adventure marked by an unwavering attention
+                            to detail. Some of my technology skills were self-taught, while others learned through
+                            academic courses. I've honed my craft in various fields, from data analysis using tools like
+                            BigQuery, SQL, and Tableau, to web development with HTML, CSS/SCSS, and React. I've also
+                            delved into computer forensics, exploring tools like Wireshark, Magnet Forensics' AXIOM, and
+                            more.With proficiency in MS Office Suite, Python, and coding in VS Code, I bring a unique
+                            blend of skills to every endeavor.
+                        </p>
+                    </div>
+                    <!-------- Button Links to other pages --------------->
+                    <p class="cardTitle">This portfolio is a testament to my ever-evolving skills and interests.</p>
+                    <div class="btnRow">
+                        <a href="/pages/projects.html" class="btn btnPrimary">View My Projects</a>
+                        <div class="btn disabled">View My Hobbies</div> <!--- Make an href to hobbies page --->
+                    </div>
+                </div>
+
+                <!----------------------------------- Modals ------------------------------------------------->
+                <!-- More about me Modal -->
+                <div id="aboutModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modalContent">
+                        <div> <!--Modal Image & close button -->
+                            <span class="close sectionP">&times;</span>
+                            <img src="/assets/spunYarn.JPG" alt="orange and red handspun yarn skein">
+                        </div>
+                        <div class="modalTxt">
+                            <h3>Fiber Arts Enthusiast</h3>
+                            <p>When I'm not immersed in the digital realm, you can often find me in the world of fiber
+                                arts, where creativity knows no bounds. Whether it's knitting, spinning, or weaving, I
+                                find solace and inspiration in the world of textiles. It's a soothing balance to the
+                                fast-paced tech world.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Likes Modal -->
+                <div id="likesModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modalContent">
+                        <div> <!--Modal Image & close button -->
+                            <span class="close sectionP">&times;</span>
+                            <div class="modalImgs">
+                                <img src="/assets/pikmin.jpg" alt="Three Pikmin peeking from behind a door frame.">
+                                <img src="/assets/chu.jpg" alt="Legend of Zelda Breath of the Wild chu enemy">
+                            </div>
+                        </div>
+                        <div class="modalTxt">
+                            <h3>Girl Gamer at Heart</h3>
+                            <p>If I am not working on my projects then you'll find me playing video games. Video games
+                                are not just a pastime; they're a universe of storytelling, strategy, and art. It's
+                                where I embrace challenges and learn valuable problem-solving skills. From classic
+                                adventures to modern
+                                marvels, video games have been a constant source of inspiration and entertainment
+                                throughout my life.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!------------------------------- Education Section --------------------------------------->
+        <article class="education">
+            <h2 class="Primary-500">Education</h2>
+            <div class="courseraCert screen">
+                <h3>Coursera Certificates</h3>
+                <div class="listContainer">
+                    <div class="flexList">
+                        <p>Google Data Analytics</p>
+                        <p>June 2023</p>
+                    </div class="flexList">
+                    <div class="flexList ">
+                        <p>Google Cyber Security</p>
+                        <p>July 2023</p>
+                    </div>
+                    <div class="flexList">
+                        <p>Meta Front End Developer</p>
+                        <p>August 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="degrees screen">
+                <h3>College Degrees</h3>
+                <div class="listContainer">
+                    <div class="flexList">
+                        <p>M.S. Cybersecurity Management</p>
+                        <p>October 2021</p>
+                    </div>
+                    <div class="flexList">
+                        <p>B.S. Biomedical Engineering</p>
+                        <p>May 2016</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!------------------------------- Large Skills Section --------------------------------------->
+        <article class="screen skillContainer">
+            <h2 class="Primary-600">My Skills</h2>
+            <div class="skills">
+                <div class="bubble">
+                    <img src="/assets/BubbleC.svg"></img>
+                    <p class="sectionP skill">HTML</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleS.svg"></img>
+                    <p class="sectionP skill">Curiosity</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleC.svg"></img>
+                    <p class="sectionP skill">Python</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleH.svg"></img>
+                    <p class="sectionP skill">Weaving</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleS.svg"></img>
+                    <p class="sectionP skill">Detail Oriented</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleC.svg"></img>
+                    <p class="sectionP skill">SQL</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleC.svg"></img>
+                    <p class="sectionP skill">CSS/SCSS</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleS.svg"></img>
+                    <p class="sectionP skill">Self-taught</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleC.svg"></img>
+                    <p class="sectionP skill">Figma</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleH.svg"></img>
+                    <p class="sectionP skill">Spinning Yarn</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleC.svg"></img>
+                    <p class="sectionP skill">AXIOM</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleC.svg"></img>
+                    <p class="sectionP skill">Tableau</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleS.svg"></img>
+                    <p class="sectionP skill">Data Analytics</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleC.svg"></img>
+                    <p class="sectionP skill">R</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleS.svg"></img>
+                    <p class="sectionP skill">Leadership</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleC.svg"></img>
+                    <p class="sectionP skill">Neural Networks</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleC.svg"></img>
+                    <p class="sectionP skill">Excel</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleH.svg"></img>
+                    <p class="sectionP skill">Knitting</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleC.svg"></img>
+                    <p class="sectionP skill">React</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleS.svg"></img>
+                    <p class="sectionP skill">Cyber Security</p>
+                </div>
+                <div class="bubble">
+                    <img src="/assets/BubbleH.svg"></img>
+                    <p class="sectionP skill">Video Games</p>
+                </div>
+            </div>
+            <!-------- Skill Categories --------------->
+            <h3> <span class="Secondary2-500">Computer Skills</span>,
+                <span class="Secondary1-400">Soft Skills</span>,
+                <span class="Primary-500">Hobbies</span>
+            </h3>
+
+        </article>
+    </section>
+
+    <footer><!--- Footer --->
+        <hr /><!--- horizontal line decoration --->
+        <div class="headerStyle">
+            <a href="#top">
+                <h1 id="headName">D.F.</h1>
+            </a>
+            <nav><!--- Main navigation (footer ver) --->
+                <ul class="secondaryNav">
+                    <li><a class="link " href="/index.html">Home</a></li>
+                    <li><a class="link active" href="#">About Me</a></li>
+                    <li><a class="link " href="/pages/projects.html">Projects</a></li>
+                    <li><a class="link" href="/index.html#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+            <p class="legal"> Copyright 2023</p>
+        </div>
+    </footer>
+</body>
+<script>
+    /* JS for open/close modal */
+    var modals = document.getElementsByClassName("modal");
+    var closeBtns = document.getElementsByClassName("close");
+
+    // Function to open modal by id
+    function openModal(id) {
+        for (let modal of modals) {
+            if (modal.getAttribute("id") == id) {
+                modal.style.display = "block";
+                document.body.style.overflowY = "hidden";
+            }
+        }
+    }
+    // Close modal when clicking X
+    for (let closeBtn of closeBtns) {
+        closeBtn.onclick = function (event) {
+            for (let modal of modals) {
+                modal.style.display = "none";
+                document.body.style.overflowY = "overlay";
+            }
+        };
+    }
+    // Close modal when clicking outside of modal body
+    window.onclick = function (event) {
+        if (event.target.classList.contains("modal")) {
+            for (let modal of modals) {
+                modal.style.display = "none";
+                document.body.style.overflowY = "overlay";
+            }
+        }
+    };
+
+</script>
+
+</html>

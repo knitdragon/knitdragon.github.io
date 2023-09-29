@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dakota Ferguson" />
+
+    <!--------------------------- Favicon Links ----------------------------------->
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+    <link rel="manifest" href="/public/site.webmanifest">
+
+    <!--------------------------- Website Description ----------------------------------->
+    <title>Portfolio Projects</title>
+    <meta name="description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:title" content="Portfolio Projects" />
+    <meta name="og:site_name" content="Dakota's Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:locale" content="en_US" />
+
+
+    <link rel="stylesheet" href="/styles/projectsPgStyles.css" />
+
+</head>
+
+<body>
+    <header id="top"><!--- Header --->
+        <div class="headerStyle">
+            <h1 id="headName">D.F.</h1>
+            <nav><!--- Main navigation --->
+                <ul class="primaryNav">
+                    <li><a class="link " href="/index.html">Home</a></li>
+                    <li><a class="link" href="/pages/aboutMe.html">About Me</a></li>
+                    <li><a class="link active" href="#">Projects</a></li>
+                    <li><a class="link" href="/index.html#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr /><!--- horizontal line decoration --->
+
+    </header>
+
+    <section>
+        <h1>Portfolio Projects</h1>
+        <!-------------------------------- Featured Project Hero Section --------------------------------------------->
+        <article class="featured">
+            <div class="featuredImg">
+                <h2 class="Secondary2-500">Featured</h2>
+                <img src="/assets/Covid19Blue.jpg" alt="blue computer generated image of a coronavirus cell">
+            </div>
+            <!-------- Text about the project --------------->
+            <div class="projectInfoTxt">
+                <h2 class="Primary-300">Infection and death information</h2>
+
+                <div id="projectGoals">
+                    <h4>Summary:</h4>
+                    <p class="Primary-900 leadTxt">
+                        This project contains the visualization of my exploration into Covid infections and
+                        deaths data. It consists of a table, a bar graph, an interactive heat map, and a line graph with
+                        predictions. I followed the Alex the Analyst YouTube video to complete this project. In the
+                        future I plan on exploring the data further to view how different comorbidities affected a
+                        patient's outcome.
+                    </p>
+                </div>
+                <div class="dataSource">
+                    <p>Data Source:</p>
+                    <p class=" legal">
+                        Our World in Data website (August 22, 2023).
+                    </p>
+                </div>
+                <div class="links">
+                    <a class="sectionP Secondary1-500"
+                        href="https://public.tableau.com/app/profile/dakota.ferguson/viz/CovidDashboard1_16929344574090/Dashboard1">
+                        Tableau Public Viz
+                    </a><a class="sectionP Secondary1-600" href="/pages/projects/project_CovidViz.html">Steps Taken</a>
+                </div>
+                <div class="projectSkills">
+                    <h4>Skills & Programs Used:</h4>
+                    <ul class="sectionP">
+                        <li>Tableau</li>
+                        <li>Data Visualization</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-------------------------------- Other Projects Section --------------------------------------------->
+        <article class="otherProjects">
+            <h2 class="Secondary2-600">Other Projects</h2>
+            <div class="projectGrid">
+                <a href="/pages/projects/project_PortfolioWeb.html">
+                    <div class="projectTile reverseFlex">
+                        <img src="/assets/websiteDevHomePG.PNG"
+                            alt="A few lines of HTML and CSS code for this website.">
+                        <div class="projectInfoTxt">
+                            <h3>Portfolio Website</h3>
+                            <ul class="sectionP" id="projectSkills">
+                                <li>VSCode</li>
+                                <li>HTML</li>
+                                <li>CSS/SCSS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href="/pages/projects/project_CovidExplore.html">
+                    <div class="projectTile ">
+                        <img src="/assets/covid3dModel.jpg" alt="computer generated 3d model of SARS-COV2">
+                        <div class="projectInfoTxt">
+                            <h3>Covid19 Data Exploration</h3>
+                            <ul class="sectionP" id="projectSkills">
+                                <li>SQL</li>
+                                <li>BigQuery</li>
+                                <li>Data Exploration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href="/pages/projects/project_HousingDataCleaning.html">
+                    <div class="projectTile ">
+                        <img src="/assets/housingImg.png" alt="image of houses lining a street">
+                        <div class="projectInfoTxt">
+                            <h3>Cleaning Nashville Housing Data</h3>
+                            <ul class="sectionP" id="projectSkills">
+                                <li>SQL</li>
+                                <li>BigQuery</li>
+                                <li>Data Cleaning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href="/pages/projects/project_MovieAnalysis.html">
+                    <div class="projectTile reverseFlex">
+                        <img src="/assets/movieEquipment.jpg" alt="image of movie equipment">
+                        <div class="projectInfoTxt">
+                            <h3>Movie Industry Correlation</h3>
+                            <ul class="sectionP" id="projectSkills">
+                                <li>Python</li>
+                                <li>Jupyter Notebooks</li>
+                                <li>Data Correlation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <!--
+                <a href="/pages/projects/project_LemonRes.html">
+                    <div class="projectTile reverseFlex">
+                        <img src="/assets/" alt="React code for a fake restaurant.">
+                        <div class="projectInfoTxt">
+                            <h3>Little Lemon Reservation Webpage</h3>
+                            <ul class="sectionP" id="projectSkills">
+                                <li>React</li>
+                                <li>Figma</li>
+                                <li>Front End Dev</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href="/pages/projects/project_PokemonVis.html">
+                    <div class="projectTile ">
+                        <img src="/assets/Eeveelutions2.webp" alt="eeveelution image">
+                        <div class="projectInfoTxt">
+                            <h3>Pokemon Types Viz</h3>
+                            <ul class="sectionP" id="projectSkills">
+                                <li>Tableau</li>
+                                <li>Data Visualization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </a>-->
+            </div>
+        </article>
+    </section>
+
+    <footer><!--- Footer --->
+        <hr /><!--- horizontal line decoration --->
+        <div class="headerStyle">
+            <a href="#top">
+                <h1 id="headName">D.F.</h1>
+            </a>
+            <nav><!--- Main navigation (footer ver) --->
+                <ul class="secondaryNav">
+                    <li><a class="link " href="/index.html">Home</a></li>
+                    <li><a class="link" href="/pages/aboutMe.html">About Me</a></li>
+                    <li><a class="link active" href="#">Projects</a></li>
+                    <li><a class="link" href="/index.html#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+            <p class="legal"> Copyright 2023</p>
+        </div>
+    </footer>
+</body>
+
+</html>

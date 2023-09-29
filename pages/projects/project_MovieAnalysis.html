@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dakota Ferguson" />
+
+    <!--------------------------- Favicon Links ----------------------------------->
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+    <link rel="manifest" href="/public/site.webmanifest">
+
+    <!--------------------------- Website Description ----------------------------------->
+    <title>Project: Movie Data Analysis</title>
+    <meta name="description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:title" content="Movie Data Analysis" />
+    <meta name="og:site_name" content="Dakota's Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:locale" content="en_US" />
+
+
+    <link rel="stylesheet" href="/styles/projectPg.css" />
+    <!--<script src="/modal.js"></script>-->
+</head>
+
+<body>
+    <header id="top"><!--- Header --->
+        <div class="headerStyle">
+            <h1>D.F.</h1>
+            <nav><!--- Main navigation --->
+                <ul class="primaryNav">
+                    <li><a class="link " href="/index.html">Home</a></li>
+                    <li><a class="link" href="/pages/aboutMe.html">About Me</a></li>
+                    <li><a class="link active" href="/pages/projects.html">Projects</a></li>
+                    <li><a class="link" href="#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr /><!--- horizontal line decoration --->
+    </header>
+
+    <section id="top">
+        <h1>Movie Industry Correlation</h1>
+        <!-------------------------------- Project Summary Section --------------------------------------------->
+        <article class="featured">
+            <div class="featuredImg">
+                <img src="/assets/movieEquipment.jpg" alt="Generic image of movie production equipment">
+            </div>
+            <!-------- Text about the project --------------->
+            <div class="projectInfoTxt">
+                <h2 class="Primary-400">Data Correlation using Python</h2>
+                <a class="sectionP Secondary1-500" href="https://GitHub"> View code on GitHub </a>
+
+                <div id="projectGoals">
+                    <h4>Summary:</h4>
+                    <p class="Primary-900 leadTxt">
+                        I conducted this data analysis project to uncover the key factors influencing movie popularity
+                        and to practice using the matplotlib and Seaborn Python libraries.
+                        I chose this dataset because it spans movie genres, budgets, and release years.
+                        By applying data visualization techniques and statistical analysis, I tested my hypothesis that
+                        a movie's budget has a high correlation with it's gross revenue.
+                    </p>
+                </div>
+                <div class="dataSource">
+                    <p>Data Source:</p>
+                    <p class=" legal">
+                        Daniel Grijalvas's Kaggle page (September 2023).
+                    </p>
+                </div>
+                <div class="projectSkills">
+                    <h4>Skills & Programs Used:</h4>
+                    <ul class="sectionP">
+                        <li>Python</li>
+                        <li>Jupyter Notebooks</li>
+                        <li>Data Correlation</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!------------------------------- Process Grid ----------------------------------------------------->
+        <article class="processGrid">
+            <div class="processBkgd">
+                <h3 class="Secondary2-100">Process</h3>
+            </div>
+            <div class="step blockA" onclick="openModal('step1')" id="step1">
+                <h3 class="Secondary-900">Gather Data</h3>
+                <p class="leadTxt">Download the Kaggle movie industry dataset and setup a Jupiter Notebook.</p>
+            </div>
+            <div class="step blockB" onclick="openModal('step2')" id="step2">
+                <h3 class="Secondary-900">Check for missing information</h3>
+                <p class="leadTxt">Loop through columns and rows with Python.</p>
+            </div>
+            <div class="step blockC" onclick="openModal('step3')" id="step3">
+                <h3 class="Secondary-900">Check data types</h3>
+                <p class="leadTxt">Check each column for correct data types.</p>
+            </div>
+            <div class="step blockD" onclick="openModal('step4')" id="step4">
+                <h3 class="Secondary-900">Create visuals</h3>
+                <p class="leadTxt">Create scatter plots of film budget vs gross revenue and related correlation matrix.
+                </p>
+            </div>
+        </article>
+
+        <!-------------------------------- Results Section --------------------------------------------->
+        <article class="results">
+            <h3 class="Secondary2-100">Results</h3>
+            <p class="sectionP">There is a positive relationship between the film budget and gross revenue. </p>
+            <div class="resultsImgs">
+                <img src="/assets/movieIndustryCorrelation_pic.png"
+                    alt="Movie budget vs gross earnings scatterplot with trend line.">
+            </div>
+            <div>
+                <h3 class="Secondary2-100">Future Posibilities</h3>
+                <ul class="sectionP">
+                    <li>Determine if movie genres affect gross revenue.</li>
+                    <li>Redo the project in R programming language.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!----------------------------------- Modals ------------------------------------------------->
+        <!-- Project Step 1 Modal -->
+        <div id="step1" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockA">
+                <div> <!--Modal Image & close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 1: Gather Data</h3>
+                    <p class="sectionP">Download the Kaggle movie industry dataset and setup a Jupiter Notebook.
+                    </p>
+                    <ol>
+                        <li>Download the "Movie Industry Three Decades of Movies" dataset from Kaggle
+                            (https://kaggle.com/danielgrijalvas/movies).</li>
+                        <li>Launch a new Python 3 notebook in Jupiter Notebooks.</li>
+                        <li>Import the necessary packages and libraries: pandas, seaborn, numpy, matplotlib.</li>
+                        <li>Read the data with a pandas dataframe and view the dataframe header to identify field
+                            titles.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 2 Modal -->
+        <div id="step2" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockB">
+                <div> <!--Modal Image & close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 2: Check for missing information</h3>
+                    <p class="sectionP">Loop through columns and rows with Python.
+                    </p>
+                    <ol>
+                        <li>Loop through the columns with a for loop and display the percentage of cells that have a
+                            null value.</li>
+                        <li>Drop any rwos that have missing data represented by "NaN".</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 3 Modal -->
+        <div id="step3" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockC">
+                <div> <!--Modal Image & close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 3: Check data types</h3>
+                    <p> Check each column for correct data types.
+                    </p>
+                    <ol>
+                        <li>Check what the data type is for each column with dtypes.</li>
+                        <li>Remove any trailling decimals in the "budget" and "gross" columns by changing the data type
+                            to "int64".</li>
+                        <li>Check that the "year" column matches the "released" column's year. Create a new column
+                            called "yearCorrect". </li>
+                        <li>Sort the data by the "gross" revenue column.</li>
+                        <li>Drop any duplicate movies from the data frame. </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Project Step 4 Modal -->
+        <div id="step4" class="modal">
+            <!-- Modal content -->
+            <div class="modalContent blockD">
+                <div> <!--Modal Image & close button -->
+                    <span class="close sectionP">&times;</span>
+                </div>
+                <div class="modalTxt">
+                    <h3>Step 4: Create visuals</h3>
+                    <p>Create scatter plots of film budget vs gross revenue and related correlation matrix.
+                    </p>
+                    <ol>
+                        <li>Create a scatter plot of budget vs gross revenue with matplotlib.</li>
+                        <li>Create a scatter plot of budget vs gross revenue with a trendline with seaborn.</li>
+                        <li>View any field correlation values as a table with the Pearson method.</li>
+                        <li>Create a correlation matrix from those values using seaborn and matplotlib. </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer><!--- Footer --->
+        <hr /><!--- horizontal line decoration --->
+        <div class="headerStyle">
+            <a href="#top">
+                <h1>D.F.</h1>
+            </a>
+            <nav><!--- Main navigation (footer ver) --->
+                <ul class="secondaryNav">
+                    <li><a class="link " href="/index.html">Home</a></li>
+                    <li><a class="link" href="/pages/aboutMe.html">About Me</a></li>
+                    <li><a class="link active" href="/pages/projects.html">Projects</a></li>
+                    <li><a class="link" href="/index.html#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+            <p class="legal"> Copyright 2023</p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    var modals = document.getElementsByClassName('modal');
+    var closeBtns = document.getElementsByClassName('close');
+
+    // Function to open modal by id
+    function openModal(id) {
+        for (modal of modals) {
+            if (modal.getAttribute('id') == id) {
+                modal.style.display = "block";
+                document.body.style.overflowY = "hidden";
+            }
+        }
+    };
+    // Close modal when clicking X
+    for (let closeBtn of closeBtns) {
+        closeBtn.onclick = function (event) {
+            for (let modal of modals) {
+                modal.style.display = 'none';
+                document.body.style.overflowY = "overlay";
+            }
+        }
+    }
+    // Close modal when clicking outside of modal body
+    window.onclick = function (event) {
+        if (event.target.classList.contains('modal')) {
+            for (let modal of modals) {
+                modal.style.display = 'none';
+                document.body.style.overflowY = "overlay";
+            }
+        }
+    }
+
+
+
+</script>
+
+</html>

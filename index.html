@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dakota Ferguson" />
+
+    <!--------------------------- Favicon Links ----------------------------------->
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+    <link rel="manifest" href="/public/site.webmanifest">
+
+    <!--------------------------- Website Description ----------------------------------->
+    <title>Dakota's Portfolio</title>
+    <meta name="description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:title" content="Dakota's Portfolio" />
+    <meta name="og:site_name" content="Dakota's Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="This is Dakota Ferguson's portfolio website." />
+    <meta name="og:locale" content="en_US" />
+
+
+    <link rel="stylesheet" href="/styles/styles.css" /><!--- Page stylesheet --->
+
+</head>
+
+<body>
+    <header id="top"><!--- Header --->
+        <div class="headerStyle">
+            <h1 id="headName">D.F.</h1>
+            <nav><!--- Main navigation --->
+                <ul class="primaryNav">
+                    <li><a class="link active" href="#">Home</a></li>
+                    <li><a class="link" href="/pages/aboutMe.html">About Me</a></li>
+                    <li><a class="link" href="/pages/projects.html">Projects</a></li>
+                    <li><a class="link" href="#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr /><!--- horizontal line decoration --->
+
+    </header>
+
+    <section>
+        <!------------------------------- Hero Section --------------------------------------->
+        <article id="aboutSection">
+            <div class="hero">
+                <!-------- Text about me --------------->
+                <div class="heroTxt">
+                    <div>
+                        <h1>Hi, I'm Dakota</h1>
+                        <h2 class="Primary-700">A Continual Learner</h2>
+                    </div>
+                    <p class=" Neutral-900">Fueled by an endless desire to explore, I navigate the sea of knowledge,
+                        seeking to weave the threads of learning into a tapestry of meaningful insights.
+                    </p>
+                    <a class="btn btnPrimary">View My Projects</a>
+                </div>
+                <!-------- Hero Image Section --------------->
+                <a href="/pages/aboutMe.html">
+                    <div class="heroLink">
+                        <div class="lgImgContainer">
+                            <div class="lgImg">
+                                <img src="/assets/tableau-PokemonTypesDashboard.PNG"
+                                    alt="example Tableau Public dashboard">
+                                <p class="leadTxt">data analysis and visualization</p>
+                            </div>
+                        </div>
+                        <div class="topImg1">
+                            <img src="/assets/keyboard-christianwiediger-unsplash.jpg"
+                                alt="computer keyboard"><!-- Photo by Christian Wiediger on Unsplash-->
+                            <p class="leadTxt">cyber security</p>
+                        </div>
+                        <div class="topImg2">
+                            <img src="/assets/websiteDevImg.PNG" alt="screenshot of this website's code">
+                            <p class="leadTxt">programming</p>
+                        </div>
+                        <div class="smImg"><!-- Photo by Daniel Guerra on Unsplash-->
+                            <img src="/assets/yarnLoom-danielguerra-unsplash.jpg"
+                                alt="close-up of colorful yarn bobbins on a loom">
+
+                            <div>
+                                <p class="cardTitle">Things I like:</p>
+                                <p class="leadTxt">dogs, fiber arts, technology, video games</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-------- My Skills Section --------------->
+            <div class="screen skillContainer">
+                <h3 class="Secondary2-500">Computer Skills</h3>
+                <div class="skills">
+                    <div class="bubble">
+                        <img src="/assets/BubbleC.svg"></img>
+                        <p class="sectionP skill">HTML</p>
+                    </div>
+                    <div class="bubble">
+                        <img src="/assets/BubbleC.svg"></img>
+                        <p class="sectionP skill">Python</p>
+                    </div>
+                    <div class="bubble">
+                        <img src="/assets/BubbleC.svg"></img>
+                        <p class="sectionP skill">SQL</p>
+                    </div>
+                    <div class="bubble">
+                        <img src="/assets/BubbleC.svg"></img>
+                        <p class="sectionP skill">CSS/SCSS</p>
+                    </div>
+                    <div class="bubble">
+                        <img src="/assets/BubbleC.svg"></img>
+                        <p class="sectionP skill">Figma</p>
+                    </div>
+                    <div class="bubble">
+                        <img src="/assets/BubbleC.svg"></img>
+                        <p class="sectionP skill">Axiom</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!------------------------------- Featured Project Section --------------------------------------->
+        <article class="featured" id="projectsSection">
+            <h2 class="Primary-500">Featured Project</h2>
+            <a href="/pages/projects.html">
+                <img src="/assets/tableau-CovidDashboard1.PNG" alt="Tableau Public Covid19 dashboard">
+            </a>
+            <h3 class="Primary-400">Visualization of Covid19 data</h3>
+            <p class="Primary-900">This is the visualization of my exploration into Covid infections and deaths data.
+                In the future I plan on exploring the data further to view how different comorbidities affected a
+                patient's outcome.
+                The data was sourced from Our World in Data website at the end of August 2023.</p>
+            <ul class="projectSkills">
+                <li>Skills used:</li>
+                <li>Tableau</li>
+                <li>Data Visualization</li>
+            </ul>
+        </article>
+
+        <!------------------------------- Contact Info Section --------------------------------------->
+        <article class="screen contactContainer" id="contactSection">
+            <h2 class="Primary-500">Contact Me:</h2>
+            <div class="socials">
+                <a class="social" href="https://public.tableau.com/app/profile/dakota.ferguson">
+                    <img src="/assets/TableauLogoSqr.png" alt="Tableau logo">
+                    <p>Tableau Public: profile/dakota.ferguson</p>
+                </a>
+
+                <a class="social" href="https://www.linkedin.com/in/dakota-ferguson">
+                    <img src="/assets/linkedin.svg" alt="LinkedIn logo">
+                    <p>Linked In: dakota-ferguson</p>
+                </a>
+
+                <a class="social" href="https://github.com/knitdragon">
+                    <img src="/assets/github.svg" alt="GitHub logo">
+                    <p>GitHub: knitdragon</p>
+                </a>
+
+            </div>
+        </article>
+    </section>
+
+    <footer><!--- Footer --->
+        <hr /><!--- horizontal line decoration --->
+        <div class="headerStyle">
+            <a href="#top">
+                <h1 id="headName">D.F.</h1>
+            </a>
+            <nav><!--- Main navigation (footer ver) --->
+                <ul class="secondaryNav">
+                    <li><a class="link active" href="#">Home</a></li>
+                    <li><a class="link" href="/pages/aboutMe.html">About Me</a></li>
+                    <li><a class="link" href="/pages/projects.html">Projects</a></li>
+                    <li><a class="link" href="#contactSection">Contact</a></li>
+                </ul>
+            </nav>
+            <p class="legal"> Copyright 2023</p>
+        </div>
+    </footer>
+</body>
+
+</html>

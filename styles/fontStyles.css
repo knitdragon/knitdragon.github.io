@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;600;700&family=Playfair+Display:wght@400;500&display=swap");
+/* font variables */
+/* Text styles */
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.75rem;
+  font-weight: 400;
+  letter-spacing: 0.275rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.04rem;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-family: "Josefin Slab", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.045rem;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: "Josefin Slab", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.045rem;
+  line-height: 1.6875rem;
+}
+
+p {
+  font-family: "Josefin Slab", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6875rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.leadTxt,
+ol {
+  font-family: "Josefin Slab", serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.sectionP {
+  font-family: "Josefin Slab", serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.cardTitle {
+  font-family: "Josefin Slab", serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.link {
+  font-family: "Josefin Slab", serif;
+  font-size: 1rem;
+  font-weight: 600;
+}/*# sourceMappingURL=fontStyles.css.map */

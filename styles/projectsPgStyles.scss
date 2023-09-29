@@ -1,0 +1,114 @@
+/* Import relevent stylesheets */
+@import "styleReset";
+@import "colorVariables";
+@import "fontStyles";
+@import "headerStyles";
+@import "pageStyles";
+
+/* Project Page Styles */
+section {
+    // max-width: 80%; // screens >=1440
+    margin: 0 auto;
+}
+article {
+    margin: 1rem auto;
+}
+img {
+    object-fit: cover;
+}
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+}
+h2 {
+    padding: 0 1rem 1rem 1rem;
+}
+
+/* Featured Project Section */
+.featured {
+    display: flex;
+    height: fit-content;
+    padding: 0 1rem 1rem 1rem;
+    gap: 2rem 2.5rem;
+}
+.featuredImg {
+    max-width: 50%;
+    img {
+        aspect-ratio: 1; // change to 16/9 for screens >1024
+        border-radius: 1rem;
+    }
+}
+.projectInfoTxt {
+    width: 50%; // change to 100% & row-gap: 2rem; for screens < 1024
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; // screens >=1024
+
+    h3 {
+        margin-bottom: 0.5rem;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1rem 0;
+        gap: 1rem;
+        justify-content: space-evenly; // screens >=1024
+    }
+}
+
+.projectSkills {
+    color: $clr-Neutral-700;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; // screens >=1024
+    }
+}
+/* Other Projects Section */
+.otherProjects {
+    background-color: $hue-Neutral-900;
+    background-image: linear-gradient(209deg, $btnGradientD);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.projectGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.projectTile {
+    display: flex;
+    gap: 0.5rem;
+    min-height: 15rem;
+
+    border-radius: 1rem;
+    background-color: $clr-Neutral-100;
+
+    img {
+        aspect-ratio: 1; // change to 16/9 for screens >1024
+        filter: blur(2px);
+        width: 50%;
+    }
+
+    .projectInfoTxt {
+        padding: 1rem;
+        margin: 0.5rem;
+        color: $clr-Primary-900;
+        text-overflow: clip;
+        h3 {
+            font-size: $fntSz-500;
+        }
+    }
+}
+.projectTile:hover {
+    transform: scale(1.1);
+    background-color: $clr-Secondary1-200;
+    img {
+        filter: none;
+    }
+}
+.reverseFlex {
+    flex-direction: row-reverse;
+}

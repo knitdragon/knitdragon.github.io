@@ -1,0 +1,148 @@
+/* color variables stylesheet */
+// color variables
+$clr-Primary-100: hsl(257, 82%, 93%);
+$clr-Primary-200: hsl(255, 94%, 86%);
+$clr-Primary-300: hsl(255, 94%, 75%);
+$clr-Primary-400: hsl(255, 86%, 61%);
+$clr-Primary-500: hsl(255, 81%, 53%);
+$clr-Primary-600: hsl(255, 84%, 41%);
+$clr-Primary-700: hsl(255, 90%, 30%);
+$clr-Primary-800: hsl(255, 89%, 22%);
+$clr-Primary-900: hsl(256, 91%, 13%);
+
+$clr-Secondary1-100: hsl(287, 60%, 97%);
+$clr-Secondary1-200: hsl(283, 77%, 85%);
+$clr-Secondary1-300: hsl(282, 85%, 76%);
+$clr-Secondary1-400: hsl(282, 85%, 65%);
+$clr-Secondary1-500: hsl(282, 79%, 53%);
+$clr-Secondary1-600: hsl(282, 81%, 41%);
+$clr-Secondary1-700: hsl(282, 84%, 32%);
+$clr-Secondary1-800: hsl(282, 86%, 28%);
+$clr-Secondary1-900: hsl(282, 86%, 23%);
+
+$clr-Secondary2-100: hsl(173, 56%, 94%);
+$clr-Secondary2-200: hsl(176, 80%, 85%);
+$clr-Secondary2-300: hsl(176, 81%, 77%);
+$clr-Secondary2-500: hsl(175, 75%, 60%);
+$clr-Secondary2-600: hsl(175, 64%, 45%);
+$clr-Secondary2-700: hsl(175, 73%, 34%);
+$clr-Secondary2-800: hsl(175, 80%, 25%);
+$clr-Secondary2-900: hsl(175, 86%, 14%);
+
+$clr-Neutral-100: hsl(270, 12%, 90%);
+$clr-Neutral-200: hsl(267, 9%, 76%);
+$clr-Neutral-300: hsl(265, 9%, 65%);
+$clr-Neutral-400: hsl(263, 8%, 50%);
+$clr-Neutral-500: hsl(263, 11%, 38%);
+$clr-Neutral-600: hsl(263, 17%, 30%);
+$clr-Neutral-700: hsl(262, 24%, 20%);
+$clr-Neutral-800: hsl(262, 27%, 18%);
+$clr-Neutral-900: hsl(261, 37%, 12%);
+
+// screen hues
+$hue-Neutral-600: hsla(262, 18%, 30%, 0.3);
+$hue-Neutral-900: hsla(261, 37%, 12%, 0.3);
+$hue-Secondary2-900: hsla(175, 86%, 14%, 0.3);
+// modal background
+$modal-Neutral-900: hsla(261, 37%, 12%, 0.9);
+
+// color Gradients variables
+
+// Page Background
+$linearGradient: hsla(175, 86%, 14%, 0.1), hsla(241, 37%, 24%, 0.24),
+    hsla(282, 86%, 23%, 0.4), hsla(256, 91%, 13%, 0.74);
+
+// Social Links colors
+$socialClicked: hsla(255, 81%, 53%, 1); //clr-Primary-500
+$socialHover: hsla(255, 81%, 53%, 0.3); //clr-Primary-500 opacity .3
+$socialDefault: hsla(257, 82%, 93%, 0.1); //clr-Primary-100 opacity .1
+
+// Bubble main color
+$bubbleGradient1: hsla(175, 75%, 60%, 0.5), hsla(175, 75%, 60%, 1); //clr-Secondary2-500 opacity .5, clr-Secondary2-500
+$bubbleGradient2: hsla(282, 79%, 53%, 0.5), hsla(282, 79%, 53%, 1); //clr-Secondary1-500 opacity .5, clr-Secondary1-500
+$bubbleGradient3: hsla(255, 81%, 53%, 0.5), hsla(255, 81%, 53%, 1); //clr-Primary-500 opacity .5, clr-Primary-500
+
+// Bubble shading gradients
+$shadingGradientS1: hsla(0, 0%, 95%, 0.7), hsla(0, 0%, 95%, 0);
+$shadingGradientS2: hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0),
+    hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0);
+$shadingGradientS3: hsla(0, 0%, 100%, 1), hsla(0, 0%, 100%, 0);
+
+// Button color depth
+$btnGradient: hsla(282, 86%, 23%, 0), hsla(282, 86%, 23%, 1); //clr-Secondary1-900 opacity 0, clr-Secondary1-900
+$btnGradientC: hsla(282, 86%, 23%, 0.5), hsla(282, 86%, 23%, 1); //clr-Secondary1-900 opacity 0, clr-Secondary1-900
+$btnGradientD: hsla(256, 91%, 13%, 0), hsla(256, 91%, 13%, 1); //clr-Primary-900 opacity 0, clr-Primary-900
+
+///////////////////////////////////////////////////////////////////////////
+
+/* color Styles */
+.Primary-100 {
+    color: $clr-Primary-100;
+}
+.Primary-300 {
+    color: $clr-Primary-300;
+}
+.Primary-400 {
+    color: $clr-Primary-400;
+}
+.Primary-500 {
+    color: $clr-Primary-500;
+}
+.Primary-600 {
+    color: $clr-Primary-600;
+}
+.Primary-700 {
+    color: $clr-Primary-700;
+}
+.Primary-900 {
+    color: $clr-Primary-900;
+}
+
+.Secondary1-100 {
+    color: $clr-Secondary1-100;
+}
+.Secondary1-200 {
+    color: $clr-Secondary1-200;
+}
+.Secondary1-300 {
+    color: $clr-Secondary1-300;
+}
+.Secondary1-400 {
+    color: $clr-Secondary1-400;
+}
+.Secondary1-500 {
+    color: $clr-Secondary1-500;
+}
+.Secondary1-600 {
+    color: $clr-Secondary1-600;
+}
+.Secondary1-700 {
+    color: $clr-Secondary1-700;
+}
+.Secondary1-800 {
+    color: $clr-Secondary1-800;
+}
+
+.Secondary1-900 {
+    color: $clr-Secondary1-900;
+}
+
+.Secondary2-100 {
+    color: $clr-Secondary2-100;
+}
+.Secondary2-500 {
+    color: $clr-Secondary2-500;
+}
+.Secondary2-600 {
+    color: $clr-Secondary2-600;
+}
+.Secondary2-900 {
+    color: $clr-Secondary2-900;
+}
+
+.Neutral-700 {
+    color: $clr-Neutral-700;
+}
+.Neutral-900 {
+    color: $clr-Neutral-900;
+}

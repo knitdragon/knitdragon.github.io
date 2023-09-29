@@ -1,0 +1,57 @@
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; // Enable scroll if needed
+    background-color: $modal-Neutral-900;
+}
+
+// modal content box
+.modalContent {
+    // background-color: $clr-Neutral-100;
+    margin: 20% auto;
+    max-width: 60%; // change 80% for screens <= 425px, 40% for screens >= 1440px
+    border-radius: 1rem;
+
+    /* img {
+        position: relative;
+        border-radius: 1rem;
+        aspect-ratio: 16/9; // change to 1 for screens <= 768px
+        object-fit: cover; // remove at screens <= 768px
+    }*/
+}
+.modalTxt {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: $clr-Neutral-900;
+
+    h3,
+    p,
+    ol {
+        margin: 1rem;
+    }
+    li {
+        text-align: left;
+        list-style: lower-alpha;
+        list-style-position: inside;
+        line-height: 1.25;
+        mix-blend-mode: color-burn;
+    }
+}
+// close button
+.close {
+    color: $clr-Neutral-900;
+    font-size: 5rem;
+    padding-left: 1rem;
+    z-index: 1000;
+}
+
+.close:hover,
+.close:focus {
+    color: $clr-Neutral-200;
+    cursor: pointer;
+}

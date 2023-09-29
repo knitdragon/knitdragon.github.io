@@ -1,0 +1,195 @@
+/* color variables stylesheet */
+/* color Styles */
+.Primary-100 {
+  color: hsl(257, 82%, 93%);
+}
+
+.Primary-300 {
+  color: hsl(255, 94%, 75%);
+}
+
+.Primary-400 {
+  color: hsl(255, 86%, 61%);
+}
+
+.Primary-500 {
+  color: hsl(255, 81%, 53%);
+}
+
+.Primary-600 {
+  color: hsl(255, 84%, 41%);
+}
+
+.Primary-700 {
+  color: hsl(255, 90%, 30%);
+}
+
+.Primary-900 {
+  color: hsl(256, 91%, 13%);
+}
+
+.Secondary1-100 {
+  color: hsl(287, 60%, 97%);
+}
+
+.Secondary1-200 {
+  color: hsl(283, 77%, 85%);
+}
+
+.Secondary1-300 {
+  color: hsl(282, 85%, 76%);
+}
+
+.Secondary1-400 {
+  color: hsl(282, 85%, 65%);
+}
+
+.Secondary1-500 {
+  color: hsl(282, 79%, 53%);
+}
+
+.Secondary1-600 {
+  color: hsl(282, 81%, 41%);
+}
+
+.Secondary1-700 {
+  color: hsl(282, 84%, 32%);
+}
+
+.Secondary1-800 {
+  color: hsl(282, 86%, 28%);
+}
+
+.Secondary1-900 {
+  color: hsl(282, 86%, 23%);
+}
+
+.Secondary2-100 {
+  color: hsl(173, 56%, 94%);
+}
+
+.Secondary2-500 {
+  color: hsl(175, 75%, 60%);
+}
+
+.Secondary2-600 {
+  color: hsl(175, 64%, 45%);
+}
+
+.Secondary2-900 {
+  color: hsl(175, 86%, 14%);
+}
+
+.Neutral-700 {
+  color: hsl(262, 24%, 20%);
+}
+
+.Neutral-900 {
+  color: hsl(261, 37%, 12%);
+}
+
+/* Page Styles */
+body {
+  background-color: hsl(257, 82%, 93%);
+  background-image: linear-gradient(229deg, hsla(175, 86%, 14%, 0.1), hsla(241, 37%, 24%, 0.24), hsla(282, 86%, 23%, 0.4), hsla(256, 91%, 13%, 0.74));
+  width: 80%;
+  margin: auto;
+  overflow-y: auto;
+}
+
+section {
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  border-radius: inherit;
+}
+
+h1,
+h2,
+h3,
+p,
+.leadTxt,
+.sectionP,
+.cardTitle,
+a {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+.leadTxt,
+.sectionP,
+.cardTitle,
+a {
+  line-height: normal;
+}
+
+li {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(255, 94%, 75%);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Button Styles */
+.btn {
+  padding: 1rem 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  background-image: linear-gradient(209deg, hsla(282, 86%, 23%, 0), hsl(282, 86%, 23%));
+}
+
+.btnPrimary {
+  background-color: hsl(282, 79%, 53%);
+  color: hsl(287, 60%, 97%);
+}
+
+.btnPrimary:hover {
+  background-color: hsl(282, 85%, 76%);
+  color: hsl(282, 86%, 23%);
+  box-shadow: -4px 4px 4px 0px hsla(0, 0%, 0%, 0.25);
+}
+
+.btnSecondary {
+  background-color: hsl(175, 64%, 45%);
+  color: hsl(173, 56%, 94%);
+}
+
+.btnSecondary:hover {
+  background-color: hsl(176, 81%, 77%);
+  color: hsl(175, 86%, 14%);
+  box-shadow: -4px 4px 4px 0px hsla(0, 0%, 0%, 0.25);
+}
+
+.disabled {
+  background-image: linear-gradient(229deg, hsla(256, 91%, 13%, 0), hsl(256, 91%, 13%));
+  background-color: hsl(255, 90%, 30%);
+  color: hsl(255, 84%, 41%);
+  cursor: not-allowed;
+}
+
+.clicked {
+  background-image: linear-gradient(229deg, hsla(282, 86%, 23%, 0.5), hsl(282, 86%, 23%));
+  color: hsl(282, 81%, 41%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}/*# sourceMappingURL=pageStyles.css.map */

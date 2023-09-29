@@ -1,0 +1,89 @@
+/* color variables stylesheet */
+/* color Styles */
+.Primary-100 {
+  color: hsl(257, 82%, 93%);
+}
+
+.Primary-300 {
+  color: hsl(255, 94%, 75%);
+}
+
+.Primary-400 {
+  color: hsl(255, 86%, 61%);
+}
+
+.Primary-500 {
+  color: hsl(255, 81%, 53%);
+}
+
+.Primary-600 {
+  color: hsl(255, 84%, 41%);
+}
+
+.Primary-700 {
+  color: hsl(255, 90%, 30%);
+}
+
+.Primary-900 {
+  color: hsl(256, 91%, 13%);
+}
+
+.Secondary1-100 {
+  color: hsl(287, 60%, 97%);
+}
+
+.Secondary1-200 {
+  color: hsl(283, 77%, 85%);
+}
+
+.Secondary1-300 {
+  color: hsl(282, 85%, 76%);
+}
+
+.Secondary1-400 {
+  color: hsl(282, 85%, 65%);
+}
+
+.Secondary1-500 {
+  color: hsl(282, 79%, 53%);
+}
+
+.Secondary1-600 {
+  color: hsl(282, 81%, 41%);
+}
+
+.Secondary1-700 {
+  color: hsl(282, 84%, 32%);
+}
+
+.Secondary1-800 {
+  color: hsl(282, 86%, 28%);
+}
+
+.Secondary1-900 {
+  color: hsl(282, 86%, 23%);
+}
+
+.Secondary2-100 {
+  color: hsl(173, 56%, 94%);
+}
+
+.Secondary2-500 {
+  color: hsl(175, 75%, 60%);
+}
+
+.Secondary2-600 {
+  color: hsl(175, 64%, 45%);
+}
+
+.Secondary2-900 {
+  color: hsl(175, 86%, 14%);
+}
+
+.Neutral-700 {
+  color: hsl(262, 24%, 20%);
+}
+
+.Neutral-900 {
+  color: hsl(261, 37%, 12%);
+}/*# sourceMappingURL=colorVariables.css.map */
